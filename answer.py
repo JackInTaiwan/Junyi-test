@@ -1,4 +1,11 @@
-def q1() :
+def q1_a() :
+    word = input("Please enter one string: ")
+    word_rev = word[-1::-1]
+    print (word_rev)
+
+
+
+def q1_b() :
     sentence = input("Please enter one complete sentence: ")
     words = sentence.split()
 
@@ -24,14 +31,19 @@ def q2() :
 
 if __name__ == "__main__" :
     while True :
-        q = int(input("Please enter the number of question (1 or 2) : "))
+        q = input("Please enter the number of question (1a or 1b or 2) : ")
 
-        # Question 1
-        if q == 1 :
-            q1()
+        # Question 1a
+        if q == "1a" :
+            q1_a()
+            break
+
+        # Question 1b
+        if q == "1b" :
+            q1_b()
             break
 
         # Question 2
-        elif q == 2 :
+        elif q == "2" :
             q2()
             break
